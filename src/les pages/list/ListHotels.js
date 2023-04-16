@@ -1,12 +1,4 @@
-import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Main from './les pages/Main/Main';
-import List from './les pages/list/List';
-import Hotel from './les pages/hotels/Hotel';
-import ListPass from './les pages/list/ListPass';
-
-function App() {
-   const Countries=[
+export const Countries=[
     {
         id:Math.random(),
         name: "Australia",
@@ -39,27 +31,9 @@ function App() {
         id:Math.random(),
         name: "Hawai",
         imageURL:'https://media.gettyimages.com/id/1038532990/fr/photo/antenne-de-diamond-head-state-park.jpg?s=612x612&w=gi&k=20&c=nIgaDogpm8RRnfIYRKtcCIrmSyXLMhV4XrtmB9f1QMY=',
-        Ticketprice: 500,
+        Ticketprice: 800,
 
     }
 
 
 ]
-  return (
-    <div className="App">
-      <BrowserRouter>
-      
-      <Routes>
-        <Route path="/" element={<Main/>}/>
-        <Route path="/hotels" element={<div><List /><><ListPass List={Countries}/></></div>}/>
-        
-        <Route path="/hotel/:id" element={<Hotel List={Countries}/>}/>
-      </Routes>
-      
-
-      </BrowserRouter>
-    </div>
-  );
-}
-
-export default App;
